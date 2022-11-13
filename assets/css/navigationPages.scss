@@ -1,0 +1,61 @@
+#container-navigation-pages{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .container-arrow{
+    height: 3rem;
+    width: 3rem;
+    border-radius: .8em;
+    &:hover{
+      animation: shadowHover .5s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+    }
+  }
+
+
+
+  #navigation-pages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+      .container-page{
+        margin: auto auto;
+        height: 3rem;
+        width: 3rem;
+        border-radius: .8em;
+        //No agrega la animación a los elemetos con la clase selected-page 
+        &:hover:not(.selected-page){
+          animation: shadowHover .5s cubic-bezier(0.4, 0.0, 0.2, 1) forwards;
+        }
+        label {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
+      }
+  }
+  
+}
+
+//agregar la animcación a una clase
+//poner un listener
+//agregar la clase con js
+@keyframes shadowHover {
+  0%{
+    background-color: white; 
+    color: black;
+  }
+  100%{
+    background-color: black;
+    color: white;
+  }
+}
+
+
+
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bsale app</title>
+<script defer src="./dist/javascript/bundle.js"></script><link href="./dist/css/main.514d2346a58d166f9229.css" rel="stylesheet"></head>
+<body>
+
+  
+  <div class="container-app">
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Bsale</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorias
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item all"  href="/">Ver todo</a></li>
+                <li><hr class="dropdown-divider"></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex form-inline">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Vista Productos -->
+    <div class="container">
+      <div id="products" class="container row row-cols-1 row-cols-md-4 g-4"></div>
+      <div id="container-navigation-pages">
+        <div class="container-arrow arrow-left">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>  
+        </div>
+        <div id="navigation-pages"></div>
+        <div class="container-arrow arrow-right">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </div>       
+      </div>
+    </div>
+    
+    <footer>
+      
+    </footer>
+    
+  </div>
+
+
+  <!-- Componentes -->
+  <div id="cargando" >Cargando...</div>
+
+  <template id="template-card">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+          <button href="#" class="btn btn-dark">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <template id="template-pill">
+    <li>
+      <label for="" class="dropdown-item"></label>
+      <input type="button">
+    </li>
+  </template>
+
+  <template id="navigation-pages-template">
+    <div class="container-page">
+      <label for="" class="label"></label>
+      <input type="button" id="" >
+    </div>
+  </template>
+</body>
+</html>

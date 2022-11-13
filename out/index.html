@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+    
+    
+    
+    
+    <h3> </h3>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <section>
+    <article><h2>BSALE CHALLENGE</h2>
+    <h3>Introducción</h3>
+    <p>El presente proyecto está desarrollado en una arquitectura cliente/servidor API REST. Su creación tiene como objetivo ser parte de un desafío de selección para formar parte del equipo de desarrolladores de la empresa &quot;bsale&quot;. A continuación podrás revisar la documentación de dicho proyecto y además podŕas revisar en detalle las funciones principales en la navegacion al costado derecho de este parrafo.</p>
+    <h3>Contexto</h3>
+    <p>En primer lugar, se solicita conectar la base de datos entregada a una aplicación backend construida en un framework de elección basado en arquitectura REST, con el fin de servir los datos alojados en la nube de dicha BD. En segundo lugar, se debe construir el cliente/frontend en javascript vanilla para consumir dicha API RESTful. Además, se requiere crear un buscador que retorne las busquedas filtradas desde el servidor, entre otros requerimientos para simular una tienda virtual.</p>
+    <h3>Solución</h3>
+    <p>En respuesta a lo solicitado y considerando que estamos ubicados en la capa, decidí usar el siguiente stack de desarrollo: Para el backend el framework de node expressJS, para gestionar la base de datos sequelizeJS (ORM). En cuanto a el frontend, lo siguiente: webpack, bootstrap, sass/css, javascript vanilla. A continuación revisaremos en detalle frontend y backend  </p>
+    <h1><strong>Frontend</strong></h1>
+    <h3>Entorno de desarrollo (pre-requisitos)</h3>
+    <ul>
+    <li>Node JS v16.13.1</li>
+    <li>Webpack v5.66.0</li>
+    </ul>
+    <h3>Stack</h3>
+    <ul>
+    <li>Javascript vanilla</li>
+    <li>Bootstrap v5.1.3</li>
+    <li>Css/Sass</li>
+    </ul>
+    <h3>Dependencias</h3>
+    
+    <h3>Instalación local</h3>
+    <p>1- Ingresar o posicionar tu terminal en la caperta raíz del proyecto <br>
+    2- Ejecutaremos <strong>npm install</strong> para instalar las dependencias de node_modules<br>
+    3- Ejecutamos <strong>npm run dev</strong> para ejecutar el webpack server en <a href="http://localhost:3000">http://localhost:3000</a></p>
+    <h3><strong>Webpack</strong></h3>
+    <p>Webpack es una herramienta que realiza multiples funciones, además de servir la aplicación en el entorno de desarrollo, su principal función es empaquetar, minimizar y exportar los archivos del proyecto para su correcta funcionalidad en producción.
+    A continuación revisaremos la configuración usada en el proyecto:</p>
+    <p><strong>Configuración general:</strong></p>
+    <img src="screenshots/webpack.png" alt="">
+    </br>
+    </br>
+    </br>
+    <h3><strong>Testing</strong></h3>
+    <p>Para asegurar de que todo funcione de manera correcta, realice testing manual sobre las principales funcionalidades. Puedes revisar la función mecionada en cada feature en detalle a traves de la barra lateral</p>
+    <h3>Feature 1</h3>
+    <p><strong>Descripción:</strong>
+    Agregar un buscador, el cual tiene que estar implementado a nivel
+    de servidor, mediante una Api Rest.</p>
+    <p><strong>Resultado esperado:</strong>
+    Se espera que al ingresar el nombre de un producto, se devuelvan las coincidencias.</p>
+    <p><strong>Resultado obtenido:</strong>
+    La barra de busqueda retorna correctamente las coincidencias mediante el boton y la escucha del evento del teclado. Para evitar realizar multiples peticiones al servidor por cada tecla presionada, la función que lo realiza tiene un delay de 1000ms y un limpiador de intervalos.</p>
+    <p><strong>Función utilizada: searchProduct()</strong></p>
+    <img src="screenshots/searchbar.gif" alt="">
+    </br>
+    </br>
+    </br>
+    <h3>Feature 2</h3>
+    <p><strong>Descripción:</strong>
+    Implementar filtros por atributo.</p>
+    <p><strong>Resultado esperado:</strong>
+    Se espera mostrar las categorias disponibles y que al seleccionar una categoria, se devuelvan todos los productos que pertenecen a dicha categoria.</p>
+    <p><strong>Resultado obtenido:</strong>
+    La selección multiple carga correctamente los nombres de las categorias son obtenidos desde la API REST. Además, al seleccionar una categoria, también trae los productos asociados.</p>
+    <p><strong>Función utilizada: setFilter()</strong></p>
+    <img src="screenshots/filter.gif" alt="">
+    </br>
+    </br>
+    </br>
+    <h3><strong>Deploy</strong></h3>
+    <p>Para gestionar el deploy en firebase, segui las instrucciones del sitio oficial que podrán revisar en la sección wiki de la documentación.</p>
+    <p><strong>Requerido:</strong>
+    <strong>Instalar Firebase:</strong>
+    npm install -g firebase
+    npm install -g firebase-tools</p>
+    <p><strong>Iniciar sesión en firebase:</strong>
+    firebase login</p>
+    <p><strong>Integrar firebase al proyecto:</strong>
+    firebase init</p>
+    <p><strong>Ejecutar deploy:</strong>
+    firebase deploy --only hosting</p>
+    <p><strong>Url del proyecto:</strong>
+    <a href="https://bsale-client-594e1.web.app/">https://bsale-client-594e1.web.app/</a></p>
+    
+    <h3><strong>Wiki</strong></h3>
+    <p>Integrar bootstrap en webpack:
+    <a href="https://getbootstrap.com/docs/4.0/getting-started/webpack/">https://getbootstrap.com/docs/4.0/getting-started/webpack/</a></p>
+    <p>Integrar Firebase al proyecto:
+    <a href="https://firebase.google.com/docs/hosting/quickstart?hl=es">https://firebase.google.com/docs/hosting/quickstart?hl=es</a></p>
+    
+    <h1><strong>Backend</strong></h1>
+    <h3>Entorno de desarrollo (pre-requisitos)</h3>
+    <ul>
+    <li>Node JS v16.13.1</li>
+    <li>Mysql v2.18.1</li>
+    </ul>
+    <h3>Stack</h3>
+    <ul>
+    <li>Express v4.16.4</li>
+    <li>Sequelize ORM v6.13.0</li>
+    <li>Heroku v7.59.1</li>
+    </ul>
+    <h3>API DOC</h3>
+    <ul>
+    <li>Swagger</li>
+    <li>jsDoc</li>
+    </ul>
+    <h3>Dependencias</h3>
+    <img src="screenshots/dependencias2.png" alt="">
+    <h3>Instalación local</h3>
+    <p>1- Ingresar o posicionar tu terminal en la caperta raíz del proyecto <br>
+    2- Ejecutaremos <strong>npm install</strong> para instalar las dependencias de node_modules<br>
+    3- Ejecutamos <strong>npm run dev</strong> para ejecutar el webpack server en [http://localhost:8080]</p>
+    <h3><strong>Express y Sequelize ORM</strong></h3>
+    <p>La parte primordial en este desafío según mi percepción fue conectar la base de datos, contruir los modelos para manipular la información con los estándares de encapsulamiento adecuados. Por este motivo decidí trabajar con Express y Sequelize, programar del lado del servidor con javascript y gestionar con un ORM la base de datos. Entonces, lo primero fue crear una app con <strong>express --view=pug myapp</strong>. Esta linea de comando genera un esquema básico de una app servida con Express.
+    Traer los modelos de la base de datos existentes fue todo un desafío, pero finalmente usando la api sequelize-auto extraje los modelos con el siguiente comando:</p>
+    <p>sequelize-auto -h <host> -d <database> -u <user> -x [password] -p [port] --dialect [dialect] -c [/path/to/config] -o [/path/to/models] -t [tableName]</p>
+    <p>La línea de comandos anterior da como resultado al carpeta models con los archivos configurados con sequelize, solo hace falta iniciar la configuración con <strong>sequelize init</strong>. Esta ultima instrucción genera la conexión a la base de datos en un archivo index.js dentro de la carpeta models y además genera un objeto JSON para registrar la configuración de la base de datos como se aprecia a continuación:</p>
+    <img src="screenshots/config-sequelize.png" alt="">
+    <p>Una vez configurada la base de datos, pude empezar a manipular la información mediante los metodos que entrega sequelize a través de sus modelos. Cabe destacar que al trabajar con un ORM tenemos la ventaja de poder trabajar con distintos motores de base de datos, en este caso para la base de datos de prueba configuramos con el motor de sequelize. Para continuar construí los controladores, aquí podemos pareciar un ejemplo del controlador del modelo <strong>product</strong>:</p>
+    <img src="screenshots/controlador-producto.png" alt="">
+    <p>Una vez configurado el controlador, configuramos la ruta con el objeto router de Express, que nos ofrece la posibilidad de configurar endpoints para nuestra API RESTful. Para esre caso en particular no fue necesario generar la configuración de peticiones POST,PUTS o DELETE ya que solo se requiere de momento hacer peticiones GET. A continuación las rutas del modelo <strong>product</strong></p>
+    <img src="screenshots/rutas-product.png" alt="">
+    <p>Finalmente, debemos importar e ingresar las rutas a la configuración de nuestro servidor en el archivo app.js.</p>
+    <p>¡Y ya está! tenemos nuestra API RESTful configurada.</p>
+    <h3><strong>ENDPOINTS</strong></h3>
+    <p>Para entregar una información clara sobre los <strong>endpoints</strong> que maneja la API y, siguiendo el estandar de buenas practicas realicé la documentación con la herramienta swagger, que a su vez nos ofrece los schemas y un entorno de pruebas para validar que las respuestas se esten recibiendo de forma correcta. En el siguiente enlace, puedes revisarlo:</p>
+    <a href="https://bsale-challenge.herokuapp.com/api-docs/">https://bsale-challenge.herokuapp.com/api-docs/</a>
+    <h3><strong>Testing</strong></h3>
+    <h3>Feature 1</h3>
+    <p><strong>Descripción:</strong> Gestionar un request mediante swagger al endpoint <strong>/api/products</strong></p>
+    <p><strong>Resultado esperado:</strong> Retorna un JSON con todos los productos contenido en la BD</p>
+    <p><strong>Resultado obtenido:</strong> Retorna un array de objetos JSON con todos los productos</p>
+    <p><strong>method: GET</strong></p>
+    <img src="screenshots/api-products.gif" alt="">
+    <h3>Feature 2</h3>
+    <p>Descripción: Gestionar un request mediante swagger al endpoint <strong>/api/products/{searchParams}</strong></p>
+    <p>Resultado esperado: Retorna un JSON con los productos que en su nombre hagan match con el search params</p>
+    <p>Parametro ingresado: mr big</p>
+    <p>Resultado obtenido:</p>
+    <p>[
+    {
+    &quot;id&quot;: 5,
+    &quot;name&quot;: &quot;ENERGETICA MR BIG&quot;,
+    &quot;url_image&quot;: &quot;https://dojiw2m9tvv09.cloudfront.net/11132/product/misterbig3308256.jpg&quot;,
+    &quot;price&quot;: 1490,
+    &quot;discount&quot;: 20,
+    &quot;category&quot;: 1
+    }
+    ]</p>
+    <p>method: GET</p>
+    <img src="screenshots/mr-big.gif" alt="">
+    <h3><strong>Deploy</strong></h3>
+    <p>Asegurate de tener instalado el cliente de Heroku antes de ejecutar las instrucciones de deploy:</p>
+    <p>heroku login
+    heroku create
+    git push heroku master</p>
+    <p>Url del proyecto: <a href="https://bsale-challenge.herokuapp.com/api-docs/">https://bsale-challenge.herokuapp.com/api-docs/</a></p>
+    <h3><strong>WIKI</strong></h3>
+    <p>Express-generator docu
+    <a href="https://expressjs.com/es/starter/generator.html">https://expressjs.com/es/starter/generator.html</a></p>
+    <p>Como usar Sequelize-auto 
+    <a href="https://www.npmjs.com/package/sequelize-auto">https://www.npmjs.com/package/sequelize-auto</a></p>
+    <p>Deploy en Heroku
+    <a href="https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up">https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up</a></p>
+    <h3><strong>Autor</strong></h3>
+    
+    <h3><strong>Conclusiones</strong></h3>
+    <p>Durante el desarrollo de este proyecto me sorprendí del portencial de sequelize a la hora de integrar bases de datos existentes, pensé que tardaría más generar los modelos de forma manual, pero por el contrario fue muy sencillo de realizar. También me fue impresindible contar con herramientas como swagger y jsdoc, la curva de aprendizaje no es tan elevada y la ayuda para acortar los tiempos de trabajo es mucha. Definitivamente si hay algo nuevo que me llevo de esta experiencia, son las habilidades para comenzar a documentar de forma correcta mis proyectos personales y de hobby.</p></article> 
+    </article>
+        </section>
+    
+    
+    
+    
+    
+    </div>
+        
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#bindEvents">bindEvents</a></li><li><a href="global.html#buildCategories">buildCategories</a></li><li><a href="global.html#buildProducts">buildProducts</a></li><li><a href="global.html#cleanContainer">cleanContainer</a></li><li><a href="global.html#fetchData">fetchData</a></li><li><a href="global.html#searchProduct">searchProduct</a></li><li><a href="global.html#setFilter">setFilter</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Jan 21 2022 13:35:01 GMT-0300 (GMT-03:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="screenshots/scripts/linenumber.js"> </script>
+</body>
+</html>
